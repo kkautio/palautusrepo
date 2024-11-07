@@ -1,6 +1,8 @@
+import tomli
 from urllib import request
 from project import Project
 
+# Tässä virheitä
 
 class ProjectReader:
     def __init__(self, url):
@@ -12,4 +14,14 @@ class ProjectReader:
         print(content)
 
         # deserialisoi TOML-formaatissa oleva merkkijono ja muodosta Project-olio sen tietojen perusteella
-        return Project("Test name", "Test description", [], [])
+        toml_merkkijono = tomli.loads(content)
+        print(toml_merkkijono)
+
+        # luodaan project-olio derealisoidun merkkijonon perusteella
+        name = toml_merkkijono.get("name", "Default name")
+        description = toml_merkkijono.get("description", "Default description")
+        dependencies = toml_merkkijono.get("dependecies", [])
+        dev_dependencies = toml_merkkijono.get("dev-dependencies", [])
+
+        # palautetaan project-olio
+        return Project(name, description, dependencies, dev_dependencies)
