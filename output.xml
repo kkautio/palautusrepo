@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.9 on win32)" generated="20241114 12:53:40.651" rpa="false" schemaversion="4">
+<suite id="s1" name="Login" source="c:\Users\Kirsi\Documents\TEKA3003\palautusrepo\osa3\login-robot\src\tests\login.robot">
+<test id="s1-t1" name="Login With Nonexistent Username" line="14">
+<kw name="Create User And Input Login Command" type="SETUP">
+<kw name="Create User" library="AppLibrary">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" starttime="20241114 12:53:40.695" endtime="20241114 12:53:40.695"/>
+</kw>
+<kw name="Input Login Command" library="resource">
+<kw name="Input" library="AppLibrary">
+<arg>login</arg>
+<status status="PASS" starttime="20241114 12:53:40.696" endtime="20241114 12:53:40.696"/>
+</kw>
+<status status="PASS" starttime="20241114 12:53:40.696" endtime="20241114 12:53:40.697"/>
+</kw>
+<status status="PASS" starttime="20241114 12:53:40.694" endtime="20241114 12:53:40.697"/>
+</kw>
+<kw name="Input Credentials" library="resource">
+<arg>kale</arg>
+<arg>kalle123</arg>
+<kw name="Input" library="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" starttime="20241114 12:53:40.698" endtime="20241114 12:53:40.698"/>
+</kw>
+<kw name="Input" library="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" starttime="20241114 12:53:40.698" endtime="20241114 12:53:40.699"/>
+</kw>
+<kw name="Run Application" library="AppLibrary">
+<status status="PASS" starttime="20241114 12:53:40.699" endtime="20241114 12:53:40.699"/>
+</kw>
+<status status="PASS" starttime="20241114 12:53:40.697" endtime="20241114 12:53:40.699"/>
+</kw>
+<kw name="Output Should Contain" library="AppLibrary">
+<arg>User not found</arg>
+<msg timestamp="20241114 12:53:40.700" level="FAIL">Output "User not found" is not in ['Invalid username or password']</msg>
+<status status="FAIL" starttime="20241114 12:53:40.699" endtime="20241114 12:53:40.704"/>
+</kw>
+<status status="FAIL" starttime="20241114 12:53:40.692" endtime="20241114 12:53:40.705">Output "User not found" is not in ['Invalid username or password']</status>
+</test>
+<status status="FAIL" starttime="20241114 12:53:40.659" endtime="20241114 12:53:40.707"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
