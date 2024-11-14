@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.9 on win32)" generated="20241114 13:37:05.491" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\Kirsi\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Input Credentials kalle 123">
+<msg timestamp="20241114 13:37:06.141" level="FAIL">No keyword with name 'Input Credentials kalle 123' found.</msg>
+<status status="FAIL" starttime="20241114 13:37:06.141" endtime="20241114 13:37:06.141"/>
+</kw>
+<kw name="Output Should Contain Invalid password format">
+<status status="NOT RUN" starttime="20241114 13:37:06.142" endtime="20241114 13:37:06.142"/>
+</kw>
+<status status="PASS" starttime="20241114 13:37:05.524" endtime="20241114 13:37:09.604"/>
+</kw>
+<status status="PASS" starttime="20241114 13:37:05.524" endtime="20241114 13:37:09.604"/>
+</test>
+<status status="PASS" starttime="20241114 13:37:05.492" endtime="20241114 13:37:09.605"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
