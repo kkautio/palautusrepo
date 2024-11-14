@@ -1,10 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.9 on win32)" generated="20241114 13:18:54.825" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.9 on win32)" generated="20241114 13:48:26.448" rpa="false" schemaversion="4">
 <suite id="s1" name="Register" source="c:\Users\Kirsi\Documents\TEKA3003\palautusrepo\osa3\login-robot\src\tests\register.robot">
-<test id="s1-t1" name="Register With Too Short Username And Valid Password" line="8">
-<status status="FAIL" starttime="20241114 13:18:54.900" endtime="20241114 13:18:54.903">Test cannot be empty.</status>
+<test id="s1-t1" name="Register With Valid Username And Password" line="6">
+<kw name="Input New Command And Create User" type="SETUP">
+<kw name="Input New Command" library="resource">
+<kw name="Input" library="AppLibrary">
+<arg>new</arg>
+<status status="PASS" starttime="20241114 13:48:26.480" endtime="20241114 13:48:26.480"/>
+</kw>
+<status status="PASS" starttime="20241114 13:48:26.479" endtime="20241114 13:48:26.480"/>
+</kw>
+<kw name="Create User" library="AppLibrary">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" starttime="20241114 13:48:26.480" endtime="20241114 13:48:26.480"/>
+</kw>
+<status status="PASS" starttime="20241114 13:48:26.479" endtime="20241114 13:48:26.481"/>
+</kw>
+<kw name="Input Credentials" library="resource">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<kw name="Input" library="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" starttime="20241114 13:48:26.482" endtime="20241114 13:48:26.482"/>
+</kw>
+<kw name="Input" library="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" starttime="20241114 13:48:26.482" endtime="20241114 13:48:26.483"/>
+</kw>
+<kw name="Run Application" library="AppLibrary">
+<status status="PASS" starttime="20241114 13:48:26.483" endtime="20241114 13:48:26.483"/>
+</kw>
+<status status="PASS" starttime="20241114 13:48:26.481" endtime="20241114 13:48:26.483"/>
+</kw>
+<kw name="Output Should Contain" library="AppLibrary">
+<arg>Registration successful</arg>
+<msg timestamp="20241114 13:48:26.484" level="FAIL">Output "Registration successful" is not in ['User with username kalle already exists']</msg>
+<status status="FAIL" starttime="20241114 13:48:26.484" endtime="20241114 13:48:26.487"/>
+</kw>
+<status status="FAIL" starttime="20241114 13:48:26.478" endtime="20241114 13:48:26.487">Output "Registration successful" is not in ['User with username kalle already exists']</status>
 </test>
-<status status="FAIL" starttime="20241114 13:18:54.836" endtime="20241114 13:18:54.909"/>
+<status status="FAIL" starttime="20241114 13:48:26.453" endtime="20241114 13:48:26.489"/>
 </suite>
 <statistics>
 <total>
